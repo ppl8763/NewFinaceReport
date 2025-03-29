@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Quidditch-themed Financial Dashboard - Track stocks like a Hogwarts wizard!"
+    />
+    <!-- Preload critical resources -->
+    <link rel="preload" href="%PUBLIC_URL%/static/js/main.js" as="script">
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>Gringotts Trading Pitch | Stock Market Quidditch</title>
+    <!-- Add this script for GitHub Pages routing -->
+    <script>
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <div class="no-script">
+        <h1>🦉 Owl Post Required!</h1>
+        <p>You need to enable JavaScript to experience the magic of Gringotts Trading Pitch.</p>
+      </div>
+    </noscript>
+    <div id="root"></div>
+    <!-- Fallback for GitHub Pages 404s -->
+    <script>
+      if (window.location.pathname.split('/').length > 2) {
+        sessionStorage.setItem('redirect', window.location.pathname);
+        window.location.replace('/your-repo-name');
+      }
+    </script>
+  </body>
+</html>

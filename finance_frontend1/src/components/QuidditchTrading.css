@@ -1,0 +1,68 @@
+.quidditch-trading {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .tabs button {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 5px 5px 0 0;
+    margin-top: 10px;
+  }
+  
+  .tabs button.active {
+    background: #740001;
+    color: white;
+  }
+  
+  .stock-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .stock-controls input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 200px;
+  }
+  
+  .stock-chart, .team-performance {
+    height: 300px;
+    margin-top: 20px;
+  }
+  
+  .team-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .team-card {
+    padding: 15px;
+    border-radius: 8px;
+    background: white;
+    border-left: 5px solid;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .team-card h3 {
+    margin-top: 0;
+    color: inherit;
+  }
